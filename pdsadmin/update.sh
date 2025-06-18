@@ -3,6 +3,13 @@ set -o errexit
 set -o nounset
 set -o pipefail
 
+cat <<MESSAGE
+Currently, this server do not support updating PDS.
+MESSAGE
+
+exit 1;
+
+
 PDS_DATADIR="/pds"
 COMPOSE_FILE="${PDS_DATADIR}/compose.yaml"
 COMPOSE_URL="https://raw.githubusercontent.com/bluesky-social/pds/main/compose.yaml"
