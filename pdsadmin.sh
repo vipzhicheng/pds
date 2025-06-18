@@ -25,6 +25,6 @@ if ! curl --fail --silent --show-error --location --output "${SCRIPT_FILE}" "${S
 fi
 
 chmod +x "${SCRIPT_FILE}"
-if "${SCRIPT_FILE}" "$@"; then
+if PDS_HOSTNAME="your-pds-name" "${SCRIPT_FILE}" "$@"; then
   rm --force "${SCRIPT_FILE}"
 fi
